@@ -1,0 +1,13 @@
+.transition-hover {
+    transition: all 0.3s ease;
+}
+
+.transition-hover:hover {
+    color: #0d6efd !important;
+    transform: translateY(-2px);
+}
+
+.logo {
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
