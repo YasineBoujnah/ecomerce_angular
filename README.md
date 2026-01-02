@@ -1,3 +1,4 @@
+🚧 Work in Progress :I am still working on this project, so it is not finished yet.
 # EComere
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
