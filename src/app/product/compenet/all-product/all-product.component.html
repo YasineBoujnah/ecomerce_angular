@@ -1,35 +1,17 @@
+@if (loading) {
+<app-loading type="card"></app-loading>
+} @else {
 <div class="container py-4">
     <!-- Filter Section -->
     <div class="row mb-5 g-3 align-items-center bg-white p-4 rounded-4 shadow-sm mx-0">
         <div class="col-12">
-            <form (ngSubmit)="filtreBySearch()" class="filter-form">
-                <div class="filter-wrapper">
-                    <div class="search-input-group">
-                        <i class="bi bi-search search-icon"></i>
-                        <input type="text" class="form-control search-input" [(ngModel)]="searchText" name="searchText"
-                            placeholder="Search for amazing products...">
-                    </div>
-
-                    <div class="category-select-group">
-                        <select class="form-select category-select" [(ngModel)]="selectedCategory"
-                            name="selectedCategory">
-                            @for (cat of categories; track cat) {
-                            <option [value]="cat">{{cat}}</option>
-                            }
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-search-integrated">
-                        <span>Search</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </button>
-                </div>
-            </form>
+            <app-search-bar [categories]="categories" [select]="'All Categories'"
+                (search)="handleSearch($event)"></app-search-bar>
         </div>
     </div>
 
     <div class="row g-3 g-md-4 justify-content-center">
-        @for (product of filteredProduct; track product.id) {
+        @for (product of paginatedProducts; track product.id) {
         <div class="col-6 col-md-4 col-lg-3" [routerLink]="['/products/details', product.id]">
             <div class="card h-100 border-0 shadow-sm product-card overflow-hidden text-center">
                 <!-- Badge -->
@@ -66,4 +48,8 @@
             <h2 class="text-muted">No products found </h2>
         </div>
     </div>
+
+    <app-pagination [data]="filteredProduct" [itemsPerPage]="itemsPerPage" (paginatedData)="paginatedProducts = $event">
+    </app-pagination>
 </div>
+}
