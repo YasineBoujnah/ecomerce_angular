@@ -1,0 +1,164 @@
+/* =========================================
+   SPINNER LOADER (Full Screen Overlay)
+   ========================================= */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background-color: #0f172a;
+}
+
+.loading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-top: 5px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #e2e8f0;
+    margin: 0;
+    letter-spacing: 1px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 768px) {
+    .spinner {
+        width: 60px;
+        height: 60px;
+        border-width: 4px;
+    }
+
+    .loading-text {
+        font-size: 1rem;
+    }
+}
+
+/* =========================================
+   SKELETON LOADER (Shimmer Effect)
+   ========================================= */
+
+/* Shimmer Animation Base */
+.shimmer {
+    background: #f1f5f9;
+    /* Base color: slate-100 */
+    background: linear-gradient(90deg,
+            #f1f5f9 0%,
+            #e2e8f0 50%,
+            /* Shine color: slate-200 */
+            #f1f5f9 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Common Skeleton Elements */
+.skeleton-text {
+    height: 1rem;
+    background-color: #e2e8f0;
+}
+
+.skeleton-btn {
+    height: 35px;
+    width: 35px;
+}
+
+.skeleton-btn-large {
+    height: 45px;
+    width: 100%;
+}
+
+/* Skeleton Card (Grid Mode) */
+.skeleton-card {
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 250px;
+    /* Placeholder for product image */
+    background-color: #e2e8f0;
+}
+
+/* Skeleton Detail (Detail Mode) */
+.skeleton-detail-image {
+    min-height: 400px;
+    width: 100%;
+    background-color: #e2e8f0;
+}
+
+.skeleton-badge {
+    height: 25px;
+    width: 80px;
+    background-color: #e2e8f0;
+}
+
+.skeleton-title {
+    height: 2rem;
+    width: 80%;
+    background-color: #e2e8f0;
+}
+
+.skeleton-price {
+    height: 1.5rem;
+    width: 30%;
+    background-color: #e2e8f0;
+}
+
+.skeleton-subtitle {
+    height: 1.2rem;
+    width: 40%;
+    background-color: #e2e8f0;
+}
