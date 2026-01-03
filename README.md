@@ -1,6 +1,11 @@
 🚧 Work in Progress :I am still working on this project, so it is not finished yet.
 # EComere
 
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://YasineBoujnah.github.io/ecomerce_angular/)
+
+**View the Live Demo here:** [https://YasineBoujnah.github.io/ecomerce_angular/](https://YasineBoujnah.github.io/ecomerce_angular/)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
 
 ## Development server
