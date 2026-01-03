@@ -1,0 +1,1 @@
+import{Ra as o,Sa as r,Y as n,ab as a,ib as p}from"./chunk-UU4HQI2E.js";var i=(()=>{class t{static{this.\u0275fac=function(e){return new(e||t)}}static{this.\u0275cmp=n({type:t,selectors:[["app-cart"]],standalone:!0,features:[p],decls:2,vars:0,template:function(e,c){e&1&&(o(0,"p"),a(1,"cart works!"),r())}})}}return t})();var l=[{path:"",component:i}];export{l as CARTS_ROUTES};
