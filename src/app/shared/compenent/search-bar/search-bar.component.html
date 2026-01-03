@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSearch()" class="filter-form">
+    <div class="filter-wrapper">
+        <div class="search-input-group">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" class="form-control search-input" [(ngModel)]="searchText" name="searchText"
+                placeholder="Search for amazing products...">
+        </div>
+
+        <div class="category-select-group">
+            <select class="form-select category-select" [(ngModel)]="selected" name="selected">
+                @for (cat of categories; track cat) {
+                <option [value]="cat">{{cat}}</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-search-integrated">
+            <span>Search</span>
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+</form>
