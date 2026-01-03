@@ -1,0 +1,39 @@
+.page-link {
+    border: none;
+    color: #495057;
+    background: transparent;
+    font-weight: 500;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+    transition: all 0.3s ease;
+    margin: 0 3px;
+}
+
+.page-link:hover {
+    background-color: #e9ecef;
+    color: #0d6efd;
+    transform: translateY(-2px);
+}
+
+.page-item.active .page-link {
+    background-color: #0d6efd;
+    color: white;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+.page-item.disabled .page-link {
+    color: #adb5bd;
+    background: transparent;
+}
+
+.page-nav {
+    font-size: 1.1rem;
+}
+
+.page-number {
+    font-size: 0.95rem;
+}
